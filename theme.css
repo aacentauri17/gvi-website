@@ -1,19 +1,19 @@
 /*
  * GroRewardz Design Theme
  * Palette: Deep Indigo + Warm Gold on Cream
- * Fonts: Clarity City (UI + display)
+ * Fonts: Geist by Vercel (UI + display)
  * ─────────────────────────────────────────────
  * Usage: <link rel="stylesheet" href="theme.css">
  * Then reference variables anywhere in your CSS.
  */
 
-/* ── Fonts: Clarity City (VMware, SIL OFL 1.1) ───────────── */
-@font-face{font-family:'Clarity City';font-weight:100;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-Thin.woff2') format('woff2')}
-@font-face{font-family:'Clarity City';font-weight:400;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-Regular.woff2') format('woff2')}
-@font-face{font-family:'Clarity City';font-weight:500;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-Medium.woff2') format('woff2')}
-@font-face{font-family:'Clarity City';font-weight:600;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-SemiBold.woff2') format('woff2')}
-@font-face{font-family:'Clarity City';font-weight:700;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-Bold.woff2') format('woff2')}
-@font-face{font-family:'Clarity City';font-weight:800;font-style:normal;src:local('Clarity City'),url('https://cdn.jsdelivr.net/gh/vmware-archive/clarity-city@master/Webfonts/WOFF2/ClarityCity-ExtraBold.woff2') format('woff2')}
+/* ── Fonts: Geist by Vercel (SIL OFL 1.1) ────────────────── */
+@font-face{font-family:'Geist';font-weight:100;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Thin.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-weight:400;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-weight:500;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-weight:600;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-weight:700;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-weight:800;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-ExtraBold.woff2') format('woff2')}
 
 /* ── Tokens ──────────────────────────────────────────────── */
 :root {
@@ -42,7 +42,7 @@
   --grad-dark-overlay: linear-gradient(135deg, rgba(122,82,196,.4) 0%, rgba(201,150,46,.12) 100%);
 
   /* Typography */
-  --font-sans:        'Clarity City', system-ui, sans-serif;
+  --font-sans:        'Geist', system-ui, sans-serif;
 
   /* Type scale */
   --text-xs:          0.75rem;    /* 12px — eyebrow / kick labels */
