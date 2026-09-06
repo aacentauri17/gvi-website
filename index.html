@@ -16,8 +16,12 @@
 <meta name="twitter:title" content="GroRewardz — B2B Channel Loyalty &amp; Rewards Platform">
 <meta name="twitter:description" content="End-to-end channel loyalty for dealers, retailers &amp; influencers. Pan-India fulfilment. Trusted by India's largest corporates.">
 <meta name="robots" content="index,follow">
+<meta name="theme-color" content="#051C2C">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' rx='14' fill='%233d1a78'/%3E%3Crect x='14' y='32' width='7' height='12' rx='1.5' fill='%23f0dcae'/%3E%3Crect x='24.5' y='24' width='7' height='20' rx='1.5' fill='%23f0dcae'/%3E%3Crect x='35' y='14' width='7' height='30' rx='1.5' fill='%23c9962e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%23051C2C'/%3E%3Crect x='14' y='32' width='7' height='12' fill='%23ffffff'/%3E%3Crect x='24.5' y='24' width='7' height='20' fill='%23ffffff'/%3E%3Crect x='35' y='14' width='7' height='30' fill='%232251FF'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,285 +53,292 @@
 }
 </script>
 <style>
-/* ── Fonts: Geist by Vercel (SIL OFL 1.1) ────────────────── */
-@font-face{font-family:'Geist';font-weight:100;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Thin.woff2') format('woff2')}
+/* ── Fonts: Geist (UI/body) + Source Serif 4 (display) ───── */
 @font-face{font-family:'Geist';font-weight:400;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2')}
 @font-face{font-family:'Geist';font-weight:500;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2')}
 @font-face{font-family:'Geist';font-weight:600;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2')}
 @font-face{font-family:'Geist';font-weight:700;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2')}
-@font-face{font-family:'Geist';font-weight:800;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-ExtraBold.woff2') format('woff2')}
 
 /* ── Reset ─────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{font-family:'Geist',sans-serif;color:#150f2b;background:#faf8f4;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Geist',system-ui,sans-serif;color:var(--txt);background:var(--white);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-:focus-visible{outline:2px solid #3d1a78;outline-offset:3px;border-radius:3px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 :focus:not(:focus-visible){outline:none}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-  html{scroll-behavior:auto}
-  [data-reveal],[data-stagger]>*{opacity:1!important;transform:none!important;transition:none!important}
-}
 
 /* ── Tokens ────────────────────────────────────────────── */
 :root{
-  --ink:#150f2b; --indigo:#3d1a78; --indigo-dk:#241150; --indigo-lt:#7a52c4;
-  --gold:#c9962e; --gold-dk:#9c7420; --gold-lt:#f0dcae;
-  --cream:#faf8f4; --paper:#ffffff; --line:#e7e1d8; --muted:#5b5468;
-  --hero-grad:linear-gradient(160deg,#2a1256 0%,#1a0d3a 55%,#100822 100%);
+  --navy:#051C2C;
+  --navy-lt:#0A2E44;
+  --navy-card:#0B2739;
+  --blue:#2251FF;
+  --blue-dk:#1B41CC;
+  --cyan:#00A9F4;
+  --white:#ffffff;
+  --gray-bg:#F5F5F5;
+  --gray-line:#DCDCDC;
+  --txt:#051C2C;
+  --txt-muted:#4A5560;
+  --txt-dark-bg:#C2CFDA;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
 }
 
 /* ── Shared ────────────────────────────────────────────── */
-.wrap{max-width:1160px;margin:0 auto;padding:0 48px}
-section{padding:96px 0}
-h1,h2,h3{font-family:'Geist',sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.08;color:var(--ink)}
-h3{line-height:1.2}
-.serif{font-weight:700;letter-spacing:.005em}
-h2{font-size:clamp(1.85rem,3.5vw,3rem)}
-h2 .serif{color:var(--indigo)}
-.lead{color:var(--muted);max-width:58ch;font-size:1.06rem;margin-top:14px;line-height:1.7}
-.section-header{margin-bottom:52px}
-.section-alt{background:var(--paper)}
-.border-top{border-top:1px solid var(--line)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+section{padding:104px 0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--txt);letter-spacing:-.018em}
+h1{font-size:clamp(2.5rem,1.6rem + 3.4vw,4.3rem);line-height:1.06}
+h2{font-size:clamp(1.9rem,1.3rem + 2.2vw,2.9rem);line-height:1.14}
+h3{font-size:1.2rem;line-height:1.32;font-weight:600;letter-spacing:-.01em}
+.eyebrow{font-family:'Geist',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.eyebrow-light{color:var(--cyan)}
+.lead{color:var(--txt-muted);max-width:60ch;font-size:1.1rem;margin-top:20px;line-height:1.7}
+.section-header{margin-bottom:60px;max-width:56rem}
+.section-gray{background:var(--gray-bg)}
+.section-navy{background:var(--navy);color:var(--txt-dark-bg)}
+.section-navy h2,.section-navy h3{color:#fff}
+.section-navy .lead{color:var(--txt-dark-bg)}
+.rule{height:1px;background:var(--gray-line);border:0}
 
-/* ── Reveal animations ──────────────────────────────────── */
-[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+/* ── Motion ─────────────────────────────────────────────── */
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 [data-reveal].revealed{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+[data-stagger]>*{opacity:0;transform:translateY(20px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
 [data-stagger].revealed>*:nth-child(1){transition-delay:0ms}
-[data-stagger].revealed>*:nth-child(2){transition-delay:80ms}
-[data-stagger].revealed>*:nth-child(3){transition-delay:160ms}
-[data-stagger].revealed>*:nth-child(4){transition-delay:240ms}
-[data-stagger].revealed>*:nth-child(5){transition-delay:320ms}
-[data-stagger].revealed>*:nth-child(6){transition-delay:400ms}
+[data-stagger].revealed>*:nth-child(2){transition-delay:90ms}
+[data-stagger].revealed>*:nth-child(3){transition-delay:180ms}
+[data-stagger].revealed>*:nth-child(4){transition-delay:270ms}
+[data-stagger].revealed>*:nth-child(5){transition-delay:360ms}
+[data-stagger].revealed>*:nth-child(6){transition-delay:450ms}
 [data-stagger].revealed>*{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  [data-reveal],[data-stagger]>*{opacity:1!important;transform:none!important}
+}
 
-/* ── Buttons ────────────────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Geist',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.01em;padding:13px 26px;min-height:44px;border-radius:6px;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s,color .2s,box-shadow .2s,transform .2s;border:2px solid transparent}
-.btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold);box-shadow:0 2px 12px rgba(201,150,46,.3)}
-.btn-primary:hover{background:var(--gold-lt);border-color:var(--gold-lt);transform:translateY(-1px);box-shadow:0 6px 22px rgba(201,150,46,.4)}
-.btn-ghost-dark{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.btn-ghost-dark:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
-.btn-ghost{background:transparent;color:var(--indigo);border-color:rgba(61,26,120,.3)}
-.btn-ghost:hover{background:rgba(61,26,120,.06);border-color:var(--indigo)}
-.btn-white{background:#fff;color:var(--indigo-dk);border-color:#fff}
-.btn-white:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
-.btn:active{transform:scale(0.97);transition:transform 80ms ease-out,background .2s,border-color .2s,color .2s,box-shadow .2s}
+/* ── Buttons & links ────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Geist',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:.005em;padding:15px 30px;min-height:48px;border-radius:0;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:background .22s var(--ease),border-color .22s var(--ease),color .22s var(--ease)}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-primary:hover{background:var(--blue-dk);border-color:var(--blue-dk)}
+.btn-dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-dark:hover{background:var(--blue);border-color:var(--blue)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.btn-outline-light:hover{background:#fff;color:var(--navy);border-color:#fff}
+.btn:active{transform:scale(.985);transition:transform 80ms ease-out}
+
+.arrow-link{display:inline-flex;align-items:center;gap:9px;font-family:'Geist',sans-serif;font-size:.92rem;font-weight:600;color:var(--blue);transition:color .2s var(--ease)}
+.arrow-link .arw{transition:transform .3s var(--ease);display:inline-block}
+.arrow-link:hover .arw{transform:translateX(5px)}
+.arrow-link-light{color:var(--cyan)}
 
 /* ── NAV ────────────────────────────────────────────────── */
-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.88);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.28rem;letter-spacing:-.025em;color:var(--ink)}
-.brand span{color:var(--gold-dk)}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--gray-line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:32px}
+.brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:600;font-size:1.32rem;letter-spacing:-.02em;color:var(--navy)}
+.brand span{color:var(--blue)}
 .brand-mark{flex-shrink:0;display:block}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{font-size:.875rem;font-weight:500;color:rgba(21,15,43,.6);min-height:44px;display:inline-flex;align-items:center;transition:color .15s}
-.nav-links a:hover{color:var(--ink)}
-@media(max-width:900px){.nav-links{display:none}}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{position:relative;font-size:.875rem;font-weight:500;color:var(--txt);height:72px;display:inline-flex;align-items:center;transition:color .2s var(--ease)}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:22px;width:100%;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .32s var(--ease)}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a:hover::after{transform:scaleX(1)}
+@media(max-width:1000px){.nav-links{display:none}}
 
 /* ── HERO ───────────────────────────────────────────────── */
-.hero{position:relative;overflow:hidden;color:#fbf9ff;background:var(--hero-grad)}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 90% at 85% -10%,rgba(122,82,196,.35) 0%,rgba(122,82,196,0) 55%),radial-gradient(90% 70% at 5% 110%,rgba(201,150,46,.18) 0%,rgba(201,150,46,0) 58%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;padding:108px 0 88px}
-.hero h1{font-size:clamp(2.2rem,2.4rem + 1.5vw,3.8rem);font-weight:600;letter-spacing:-.02em;max-width:18ch;color:#fff;margin-bottom:18px}
-.hero h1 .serif{color:var(--gold-lt);font-size:1.02em}
-.hero-sub{font-size:1.1rem;line-height:1.7;max-width:52ch;color:#dcd4ea;margin-bottom:32px}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero{background:var(--navy);color:#fff;position:relative}
+.hero-inner{display:grid;grid-template-columns:1.35fr 1fr;gap:80px;align-items:end;padding:112px 0 88px}
+.hero h1{color:#fff;max-width:17ch;margin-bottom:26px}
+.hero-sub{font-size:1.14rem;line-height:1.72;max-width:50ch;color:var(--txt-dark-bg);margin-bottom:38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-/* Hero stat card */
-.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:30px;backdrop-filter:blur(10px)}
-.hero-card-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:20px}
-.hero-stat-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.hero-stat-item:last-of-type{border-bottom:none;padding-bottom:0}
-.hero-stat-num{font-family:'Geist',sans-serif;font-size:2.4rem;font-weight:800;line-height:1;color:#fff;letter-spacing:-.01em}
-.hero-stat-desc{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:4px}
-.hero-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
-.hero-chip{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6);padding:4px 10px;border:1px solid rgba(255,255,255,.18);border-radius:4px;background:rgba(255,255,255,.06)}
+.hero-facts{border-top:1px solid rgba(255,255,255,.18)}
+.hero-fact{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hero-fact:last-child{border-bottom:0}
+.hero-fact .n{font-family:var(--serif);font-size:2.5rem;font-weight:400;line-height:1;color:#fff;letter-spacing:-.02em}
+.hero-fact .d{font-size:.84rem;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.5}
 
-/* Stats bar */
-.hero-bottom{background:rgba(0,0,0,.35);border-top:1px solid rgba(255,255,255,.08);padding:22px 0;position:relative;z-index:1}
-.stats-inline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.stat-inline{display:flex;align-items:baseline;gap:8px}
-.stat-inline .n{font-family:'Geist',sans-serif;font-weight:800;font-size:1.75rem;color:#fff;line-height:1;letter-spacing:-.01em}
-.stat-inline .d{font-size:.82rem;color:rgba(255,255,255,.5)}
-.stat-divider{width:1px;height:28px;background:rgba(255,255,255,.12)}
-@media(max-width:900px){.stat-divider{display:none}.stats-inline{justify-content:flex-start;gap:24px}}
+.hero-bottom{border-top:1px solid rgba(255,255,255,.16);padding:26px 0}
+.stats-inline{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat-inline .n{font-family:var(--serif);font-weight:400;font-size:1.85rem;color:#fff;line-height:1;letter-spacing:-.02em;display:block}
+.stat-inline .d{font-size:.8rem;color:rgba(255,255,255,.55);margin-top:8px;display:block;line-height:1.5}
 
-/* ── MARQUEE ────────────────────────────────────────────── */
-.marquee-section{background:var(--paper);border-bottom:1px solid var(--line);padding:36px 0;overflow:hidden}
-.marquee-label{text-align:center;margin-bottom:18px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.marquee-track{display:flex;gap:36px;animation:marquee 34s linear infinite;width:max-content}
-.marquee-track:hover{animation-play-state:paused}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marquee-name{font-size:.9rem;font-weight:600;color:#a8a0b8;white-space:nowrap;cursor:default;transition:color .2s}
-.marquee-name:hover{color:var(--indigo)}
-.marquee-dot{color:var(--line);font-weight:300;flex-shrink:0}
+/* ── CLIENT ROSTER ──────────────────────────────────────── */
+.clients{padding:56px 0;border-bottom:1px solid var(--gray-line)}
+.clients-label{font-size:.72rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--txt-muted);margin-bottom:30px}
+.clients-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--gray-line);border:1px solid var(--gray-line)}
+.client-cell{background:var(--white);padding:22px 18px;font-size:.86rem;font-weight:500;color:var(--txt-muted);display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.4;min-height:76px;transition:background .22s var(--ease),color .22s var(--ease)}
+.client-cell:hover{background:var(--gray-bg);color:var(--navy)}
 
 /* ── PROBLEM ────────────────────────────────────────────── */
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.problem-text p{font-size:1.06rem;color:var(--muted);line-height:1.75;margin-bottom:18px}
-.problem-callout{background:var(--ink);border-radius:12px;padding:44px;position:relative;overflow:hidden}
-.problem-callout::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(122,82,196,.4) 0%,rgba(201,150,46,.12) 100%);pointer-events:none}
-.problem-callout-quote{font-family:'Geist',sans-serif;font-weight:500;font-size:clamp(1.15rem,2vw,1.45rem);color:#fff;line-height:1.45;margin-bottom:28px;letter-spacing:.01em;position:relative;z-index:1}
-.problem-callout-stat{position:relative;z-index:1}
-.problem-callout-stat .n{font-family:'Geist',sans-serif;font-weight:800;font-size:3.2rem;color:var(--gold-lt);line-height:1;letter-spacing:-.02em}
-.problem-callout-stat .d{font-size:.86rem;color:rgba(255,255,255,.5);margin-top:6px}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.problem-text p{font-size:1.05rem;color:var(--txt-muted);line-height:1.78;margin-bottom:22px}
+.problem-text p:last-child{margin-bottom:0}
+.problem-text strong{color:var(--navy);font-weight:600}
+.problem-callout{background:var(--navy);padding:52px 46px;color:#fff}
+.problem-quote{font-family:var(--serif);font-weight:300;font-size:clamp(1.2rem,1.6vw,1.5rem);color:#fff;line-height:1.5;margin-bottom:34px;letter-spacing:-.008em}
+.problem-callout-stat .n{font-family:var(--serif);font-weight:400;font-size:3rem;color:var(--cyan);line-height:1;letter-spacing:-.02em}
+.problem-callout-stat .d{font-size:.85rem;color:rgba(255,255,255,.6);margin-top:10px;line-height:1.55}
 
-/* ── SERVICES / TABS ────────────────────────────────────── */
-.service-tabs{display:flex;gap:0;border-bottom:2px solid var(--line);margin-bottom:48px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.service-tab{font-family:'Geist',sans-serif;font-size:.875rem;font-weight:600;color:var(--muted);padding:14px 26px;cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;background:transparent;white-space:nowrap;transition:color .2s,border-color .2s}
-.service-tab.active{color:var(--indigo);border-bottom-color:var(--indigo)}
-.service-tab:hover:not(.active){color:var(--ink)}
-.service-panel{display:none;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.service-panel.active{display:grid}
-.service-panel-text h3{font-size:clamp(1.5rem,2.5vw,2.15rem);margin-bottom:16px;color:var(--ink)}
-.service-panel-text p{font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:22px}
-.highlight-pill{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600;color:var(--indigo);padding:10px 16px;background:rgba(61,26,120,.07);border-radius:6px}
-.highlight-pill::before{content:'✓';font-weight:800;color:var(--indigo-lt)}
-.service-visual{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:40px 32px;min-height:260px;display:flex;flex-direction:column;justify-content:center}
-.service-visual .big{font-family:'Geist',sans-serif;font-weight:800;font-size:3.8rem;color:var(--indigo);line-height:1;letter-spacing:-.02em}
-.service-visual .lbl{font-size:.875rem;color:var(--muted);margin-top:6px}
-.visual-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.visual-tag{font-size:.78rem;font-weight:600;color:var(--muted);padding:5px 12px;border:1px solid var(--line);border-radius:20px;background:var(--paper)}
+/* ── SERVICE TABS ───────────────────────────────────────── */
+.service-tabs{display:flex;gap:0;border-bottom:1px solid var(--gray-line);margin-bottom:56px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.service-tab{font-family:'Geist',sans-serif;font-size:.9rem;font-weight:500;color:var(--txt-muted);padding:16px 28px 16px 0;margin-right:34px;cursor:pointer;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;white-space:nowrap;transition:color .22s var(--ease),border-color .22s var(--ease)}
+.service-tab:last-child{margin-right:0}
+.service-tab.active{color:var(--navy);border-bottom-color:var(--blue);font-weight:600}
+.service-tab:hover:not(.active){color:var(--navy)}
+.service-panel{display:none;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.service-panel.active{display:grid;animation:panelIn .5s var(--ease)}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.service-panel-text h3{font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2.05rem);font-weight:400;letter-spacing:-.018em;margin-bottom:20px;line-height:1.2}
+.service-panel-text p{font-size:1rem;color:var(--txt-muted);line-height:1.78;margin-bottom:26px}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:.86rem;font-weight:500;color:var(--navy);padding:12px 18px;background:var(--gray-bg);border-left:2px solid var(--blue)}
+.service-visual{background:var(--gray-bg);padding:46px 40px;min-height:280px;display:flex;flex-direction:column;justify-content:center}
+.service-visual .big{font-family:var(--serif);font-weight:400;font-size:4rem;color:var(--navy);line-height:1;letter-spacing:-.025em}
+.service-visual .lbl{font-size:.9rem;color:var(--txt-muted);margin-top:10px}
+.visual-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.visual-tag{font-size:.78rem;font-weight:500;color:var(--txt-muted);padding:7px 13px;background:var(--white);border:1px solid var(--gray-line)}
 
 /* ── PROCESS ────────────────────────────────────────────── */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.process-grid::before{content:'';position:absolute;top:26px;left:calc(12.5% + 8px);right:calc(12.5% + 8px);height:1px;background:linear-gradient(90deg,transparent,rgba(61,26,120,.3),var(--indigo-lt),rgba(61,26,120,.3),transparent);opacity:.6}
-.process-step{padding-right:24px}
-.process-step:last-child{padding-right:0}
-.step-num{width:52px;height:52px;border-radius:50%;border:2px solid rgba(61,26,120,.2);background:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-size:1.1rem;font-weight:700;color:var(--indigo);position:relative;z-index:1;margin-bottom:22px;transition:background .2s,border-color .2s}
-.process-step:hover .step-num{background:rgba(61,26,120,.07);border-color:var(--indigo)}
-.process-step h3{font-size:1.06rem;margin-bottom:10px;color:var(--ink)}
-.process-step p{font-size:.875rem;color:var(--muted);line-height:1.7}
-
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.process-step{border-top:2px solid var(--navy);padding-top:26px}
+.step-num{font-family:var(--serif);font-size:2.6rem;font-weight:300;color:var(--blue);line-height:1;margin-bottom:20px;letter-spacing:-.02em}
+.process-step h3{margin-bottom:12px}
+.process-step p{font-size:.9rem;color:var(--txt-muted);line-height:1.72}
 
 /* ── PROGRAMS ───────────────────────────────────────────── */
-.programs{background:var(--ink);color:#e9e4f2}
-.programs h2{color:#fff}
-.programs .lead{color:#b7adcf}
-.prog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;margin-top:52px;background:rgba(255,255,255,.07)}
-.prog-card{background:#1c1240;padding:32px 28px}
-.prog-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-lt);font-weight:700;margin-bottom:12px}
-.prog-card h3{font-size:1.15rem;color:#fff;margin-bottom:12px;font-weight:700;letter-spacing:-.01em}
-.prog-card p{font-size:.9rem;color:#c3bad8;line-height:1.65}
-.prog-stat{margin-top:16px;font-family:'Geist',sans-serif;font-weight:700;font-size:1.45rem;color:var(--gold-lt)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16)}
+.prog-card{background:var(--navy);padding:38px 32px;transition:background .25s var(--ease)}
+.prog-card:hover{background:var(--navy-card)}
+.prog-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan);font-weight:600;margin-bottom:16px}
+.prog-card h3{color:#fff;margin-bottom:14px}
+.prog-card p{font-size:.9rem;color:var(--txt-dark-bg);line-height:1.7}
+.prog-stat{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--serif);font-weight:400;font-size:1.4rem;color:#fff;letter-spacing:-.015em}
 
-/* ── CASE SPOTLIGHT ─────────────────────────────────────── */
-.spotlight{background:var(--gold-lt)}
-.spotlight .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.spotlight-stat{background:var(--ink);color:#fff;padding:48px 40px;text-align:center;border-radius:10px}
-.spotlight-stat b{display:block;font-family:'Geist',sans-serif;font-size:4.2rem;font-weight:800;color:var(--gold-lt);line-height:1}
-.spotlight-stat span{display:block;margin-top:12px;font-size:.95rem;color:#d8cfe8;line-height:1.55}
-.spotlight h2{color:var(--indigo-dk)}
-.spotlight .lead{color:#5c4a1c}
+/* ── SPOTLIGHT ──────────────────────────────────────────── */
+.spotlight .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.spotlight-stat{background:var(--navy);color:#fff;padding:56px 44px}
+.spotlight-stat b{display:block;font-family:var(--serif);font-size:4.4rem;font-weight:400;color:var(--cyan);line-height:1;letter-spacing:-.025em}
+.spotlight-stat span{display:block;margin-top:18px;font-size:.94rem;color:var(--txt-dark-bg);line-height:1.6}
 
 /* ── CASE STUDIES ───────────────────────────────────────── */
-.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.case-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s,border-color .25s}
-.case-card:hover{box-shadow:0 8px 32px rgba(21,15,43,.1);transform:translateY(-3px);border-color:rgba(61,26,120,.25)}
-.case-card-top{background:var(--indigo);padding:26px 26px 20px}
-.case-industry{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
-.case-company{font-family:'Geist',sans-serif;font-weight:700;font-size:1.35rem;color:#fff;line-height:1.2}
-.case-program{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:4px}
-.case-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
-.case-metric{background:var(--cream);padding:18px}
-.case-metric .m-num{font-family:'Geist',sans-serif;font-weight:800;font-size:1.75rem;color:var(--indigo);line-height:1;letter-spacing:-.01em}
-.case-metric .m-label{font-size:.72rem;color:var(--muted);margin-top:4px;line-height:1.45}
-.case-body{padding:20px 26px 24px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
-.case-body p{font-size:.875rem;color:var(--muted);line-height:1.65;margin-bottom:14px}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.case-card{background:var(--white);border:1px solid var(--gray-line);display:flex;flex-direction:column;transition:border-color .25s var(--ease),transform .25s var(--ease)}
+.case-card:hover{border-color:var(--navy);transform:translateY(-3px)}
+.case-card-top{background:var(--navy);padding:30px 28px}
+.case-industry{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.case-company{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:#fff;line-height:1.24;letter-spacing:-.015em}
+.case-program{font-size:.8rem;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.5}
+.case-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-line)}
+.case-metric{background:var(--gray-bg);padding:22px 20px}
+.case-metric .m-num{font-family:var(--serif);font-weight:400;font-size:1.9rem;color:var(--navy);line-height:1;letter-spacing:-.02em}
+.case-metric .m-label{font-size:.74rem;color:var(--txt-muted);margin-top:8px;line-height:1.45}
+.case-body{padding:26px 28px 30px;flex:1}
+.case-body p{font-size:.9rem;color:var(--txt-muted);line-height:1.72}
 
 /* ── AI CONSULTING ──────────────────────────────────────── */
-.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
-.ai-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:32px 28px;transition:box-shadow .25s,transform .25s,border-color .25s}
-.ai-card:hover{box-shadow:0 8px 32px rgba(21,15,43,.1);transform:translateY(-3px);border-color:rgba(61,26,120,.2)}
-.ai-tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--indigo-lt);margin-bottom:14px}
-.ai-card h3{font-size:1.1rem;margin-bottom:10px;color:var(--ink);letter-spacing:-.015em}
-.ai-card p{font-size:.9rem;color:var(--muted);line-height:1.7}
-.ai-bottom{display:flex;align-items:center;gap:36px;flex-wrap:wrap;padding-top:40px;border-top:1px solid var(--line)}
-.ai-bottom-text{font-size:.95rem;color:var(--muted);line-height:1.75;flex:1;min-width:240px}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:60px}
+.ai-card{background:var(--white);border-top:2px solid var(--navy);padding:28px 0 0;transition:border-color .25s var(--ease)}
+.ai-card:hover{border-top-color:var(--blue)}
+.ai-tag{font-family:var(--serif);font-size:1.5rem;font-weight:300;letter-spacing:-.02em;color:var(--blue);margin-bottom:16px;line-height:1}
+.ai-card h3{margin-bottom:12px}
+.ai-card p{font-size:.9rem;color:var(--txt-muted);line-height:1.75}
+.ai-bottom{display:flex;align-items:center;gap:48px;flex-wrap:wrap;padding-top:44px;border-top:1px solid var(--gray-line)}
+.ai-bottom-text{font-size:.98rem;color:var(--txt-muted);line-height:1.78;flex:1;min-width:280px;max-width:62ch}
 
 /* ── FULFILMENT ─────────────────────────────────────────── */
-.fulfil-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;background:var(--line)}
-.fulfil-panel{background:var(--paper);padding:36px 32px}
-.fulfil-panel h3{font-size:1.2rem;color:var(--indigo);margin-bottom:18px;font-weight:800;letter-spacing:-.015em}
+.fulfil-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:56px;background:var(--gray-line);border:1px solid var(--gray-line)}
+.fulfil-panel{background:var(--white);padding:42px 38px}
+.fulfil-panel h3{margin-bottom:24px;color:var(--navy)}
 .tag-list{display:flex;flex-wrap:wrap;gap:9px}
-.tag{border:1px solid var(--line);background:var(--cream);border-radius:999px;padding:9px 16px;font-size:.86rem;color:var(--ink);font-weight:600}
+.tag{border:1px solid var(--gray-line);background:var(--gray-bg);padding:10px 16px;font-size:.85rem;color:var(--txt);font-weight:500}
 
 /* ── ABOUT ──────────────────────────────────────────────── */
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
-.about-text p{font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:16px}
-.cred-box{background:var(--ink);border-radius:10px;padding:32px;position:relative;overflow:hidden}
-.cred-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(122,82,196,.35) 0%,rgba(201,150,46,.1) 100%);pointer-events:none}
-.cred-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;position:relative;z-index:1}
-.cred-list{list-style:none;display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
-.cred-list li{font-size:.9rem;color:rgba(255,255,255,.8);padding-left:16px;position:relative;line-height:1.5}
-.cred-list li::before{content:'→';position:absolute;left:0;color:rgba(255,255,255,.3);font-size:.78rem;top:3px}
-.cred-divider{height:1px;background:rgba(255,255,255,.1);margin:18px 0;position:relative;z-index:1}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}
+.about-text p{font-size:1.02rem;color:var(--txt-muted);line-height:1.8;margin-bottom:20px}
+.cred-box{background:var(--navy);padding:40px 36px;color:#fff}
+.cred-label{font-size:.7rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px}
+.cred-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+.cred-list li{font-size:.89rem;color:rgba(255,255,255,.82);padding-left:20px;position:relative;line-height:1.55}
+.cred-list li::before{content:'';position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--cyan)}
+.cred-divider{height:1px;background:rgba(255,255,255,.16);margin:24px 0}
 
 /* ── CTA BAND ───────────────────────────────────────────── */
-.ctaband{background:var(--ink);color:#fff;text-align:center;padding:96px 0;position:relative;overflow:hidden}
-.ctaband::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(122,82,196,.4) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 100%,rgba(201,150,46,.15) 0%,transparent 60%);pointer-events:none}
-.ctaband h2{color:#fff;max-width:22ch;margin:0 auto;position:relative;z-index:1}
-.ctaband h2 .serif{color:var(--gold-lt)}
-.ctaband .lead{color:#c3bad8;margin:16px auto 36px;max-width:54ch;position:relative;z-index:1}
-.cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;position:relative;z-index:1}
-.contact-details{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:center;position:relative;z-index:1}
-.contact-item{font-size:.78rem;color:rgba(255,255,255,.4);letter-spacing:.02em}
-.contact-item a{color:rgba(255,255,255,.6);transition:color .2s}
-.contact-item a:hover{color:#fff}
+.ctaband{background:var(--blue);color:#fff;padding:104px 0}
+.ctaband h2{color:#fff;max-width:20ch}
+.ctaband .lead{color:rgba(255,255,255,.88);max-width:56ch}
+.cta-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+.btn-on-blue{background:#fff;color:var(--blue);border-color:#fff}
+.btn-on-blue:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.contact-details{display:flex;flex-wrap:wrap;gap:8px 36px;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.28)}
+.contact-item{font-size:.84rem;color:rgba(255,255,255,.8)}
+.contact-item a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4);transition:border-color .2s}
+.contact-item a:hover{border-bottom-color:#fff}
 
 /* ── CONTACT ────────────────────────────────────────────── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
-.contact-info p{margin:10px 0;font-size:.95rem;line-height:1.6}
-.contact-info strong{font-weight:700;color:var(--ink)}
-.contact-info a[href^="mailto"]{color:var(--indigo);font-weight:600}
-.contact-info a[href^="tel"]{color:var(--ink)}
-.contact-map{width:100%;height:320px;border:0;border-radius:10px;filter:grayscale(.15)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info h2{margin-bottom:28px}
+.contact-row{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--gray-line);font-size:.94rem}
+.contact-row:first-of-type{border-top:1px solid var(--gray-line)}
+.contact-row dt{font-weight:600;color:var(--navy)}
+.contact-row dd{color:var(--txt-muted)}
+.contact-row a{color:var(--blue);font-weight:500}
+.contact-row a:hover{border-bottom:1px solid var(--blue)}
+.contact-map{width:100%;height:380px;border:1px solid var(--gray-line);filter:grayscale(1);transition:filter .4s var(--ease)}
+.contact-map:hover{filter:grayscale(0)}
 
 /* ── FOOTER ─────────────────────────────────────────────── */
-footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
-.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:28px}
+footer{background:var(--navy);color:var(--txt-dark-bg);padding:64px 0 36px;font-size:.86rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px}
 .footer-brand .brand{color:#fff}
-.footer-brand p{font-size:.86rem;color:#a89fc0;margin-top:10px;line-height:1.65;max-width:42ch}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
-.footer-links a{color:#a89fc0;transition:color .2s}
-.footer-links a:hover{color:var(--gold-lt)}
-.footer-bottom{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.footer-copy{font-size:.78rem;color:rgba(168,160,192,.55);letter-spacing:.02em}
+.footer-brand .brand span{color:var(--cyan)}
+.footer-brand p{font-size:.86rem;color:rgba(194,207,218,.75);margin-top:16px;line-height:1.72;max-width:44ch}
+.footer-brand p a{color:var(--cyan)}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.footer-links a{color:var(--txt-dark-bg);transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.78rem;color:rgba(194,207,218,.55)}
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
-@media(max-width:960px){
+@media(max-width:1000px){
   .wrap{padding:0 28px}
-  section{padding:72px 0}
-  .hero-inner{grid-template-columns:1fr;gap:40px;padding:88px 0 72px}
-  .hero-card{max-width:420px}
-  .problem-grid{grid-template-columns:1fr;gap:40px}
-  .service-panel{grid-template-columns:1fr;gap:32px}
-  .process-grid{grid-template-columns:1fr 1fr;gap:36px}
-  .process-grid::before{display:none}
-  .stats-row{grid-template-columns:1fr 1fr}
-  .case-grid{grid-template-columns:1fr;max-width:480px}
-  .testimonials-grid{grid-template-columns:1fr}
-  .fulfil-grid{grid-template-columns:1fr}
-  .about-grid{grid-template-columns:1fr;gap:32px}
-  .spotlight .wrap{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .stats-inline{justify-content:flex-start}
+  section{padding:76px 0}
+  .hero-inner{grid-template-columns:1fr;gap:52px;padding:80px 0 68px;align-items:start}
+  .hero-facts{max-width:440px}
+  .stats-inline{grid-template-columns:1fr 1fr;gap:24px}
+  .clients-grid{grid-template-columns:repeat(3,1fr)}
+  .problem-grid{grid-template-columns:1fr;gap:44px}
+  .service-panel{grid-template-columns:1fr;gap:40px}
+  .process-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .prog-grid{grid-template-columns:1fr 1fr}
+  .case-grid{grid-template-columns:1fr;max-width:520px}
   .ai-grid{grid-template-columns:1fr 1fr}
-  .ai-bottom{flex-direction:column;align-items:flex-start}
+  .ai-bottom{flex-direction:column;align-items:flex-start;gap:28px}
+  .fulfil-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .spotlight .wrap{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr}
+  .ctaband{padding:76px 0}
 }
-@media(max-width:600px){
+@media(max-width:620px){
   .wrap{padding:0 20px}
   section{padding:60px 0}
-  .hero-inner{padding:76px 0 60px}
-  .stats-row{grid-template-columns:1fr 1fr}
-  .stat-block{padding:28px 20px}
-  .cta-buttons{flex-direction:column;align-items:center}
-  .case-grid{max-width:100%}
+  .hero-inner{padding:64px 0 56px}
+  .stats-inline{grid-template-columns:1fr 1fr;gap:20px}
+  .clients-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:1fr}
   .prog-grid{grid-template-columns:1fr}
   .ai-grid{grid-template-columns:1fr}
+  .cta-buttons{flex-direction:column;align-items:stretch}
+  .case-grid{max-width:100%}
+  .problem-callout{padding:38px 28px}
+  .contact-row{grid-template-columns:1fr;gap:4px}
+  .ctaband{padding:60px 0}
 }
 </style>
 </head>
@@ -337,11 +348,11 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 <nav>
   <div class="wrap nav-inner">
     <a href="#" class="brand" aria-label="GroRewardz home">
-      <svg class="brand-mark" width="30" height="30" viewBox="0 0 56 56" aria-hidden="true">
-        <rect width="56" height="56" rx="14" fill="#3d1a78"/>
-        <rect x="14" y="32" width="7" height="12" rx="1.5" fill="#f0dcae"/>
-        <rect x="24.5" y="24" width="7" height="20" rx="1.5" fill="#f0dcae"/>
-        <rect x="35" y="14" width="7" height="30" rx="1.5" fill="#c9962e"/>
+      <svg class="brand-mark" width="28" height="28" viewBox="0 0 56 56" aria-hidden="true">
+        <rect width="56" height="56" fill="#051C2C"/>
+        <rect x="14" y="32" width="7" height="12" fill="#ffffff"/>
+        <rect x="24.5" y="24" width="7" height="20" fill="#ffffff"/>
+        <rect x="35" y="14" width="7" height="30" fill="#2251FF"/>
       </svg>
       Gro<span>Rewardz</span>
     </a>
@@ -352,7 +363,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
       <li><a href="#ai-consulting">AI Consulting</a></li>
       <li><a href="#about">About</a></li>
     </ul>
-    <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+    <a href="#contact" class="btn btn-dark">Book a Discovery Call</a>
   </div>
 </nav>
 
@@ -361,34 +372,27 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   <div class="wrap">
     <div class="hero-inner">
       <div class="hero-content">
-        <h1>Channel loyalty programs that make your dealers choose you — <span class="serif">every time.</span></h1>
+        <p class="eyebrow eyebrow-light">Channel Loyalty &amp; Enterprise AI</p>
+        <h1>Channel loyalty programs that make your dealers choose you — every time.</h1>
         <p class="hero-sub">GroRewardz designs, operates and fulfils end-to-end loyalty programs for dealers, retailers and influencers at India's largest corporates — from program design to pan-India fulfilment, managed entirely by us.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-primary">Book a Free Discovery Call</a>
-          <a href="https://wa.me/919920727756" class="btn btn-ghost-dark" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a href="https://wa.me/919920727756" class="arrow-link arrow-link-light" target="_blank" rel="noopener">WhatsApp us <span class="arw" aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
 
-      <div class="hero-card" data-reveal>
-        <p class="hero-card-label">Program Track Record</p>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">13+</div>
-          <div class="hero-stat-desc">Years managing enterprise loyalty programs</div>
+      <div class="hero-facts" data-reveal>
+        <div class="hero-fact">
+          <div class="n">13+</div>
+          <div class="d">Years managing enterprise loyalty programs</div>
         </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">19,000+</div>
-          <div class="hero-stat-desc">Pin codes covered for reward fulfilment</div>
+        <div class="hero-fact">
+          <div class="n">19,000+</div>
+          <div class="d">Pin codes covered for reward fulfilment</div>
         </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">~99%</div>
-          <div class="hero-stat-desc">On-time delivery rate, within 2 business days</div>
-        </div>
-        <div class="hero-chips">
-          <span class="hero-chip">Tata Capital</span>
-          <span class="hero-chip">L&amp;T</span>
-          <span class="hero-chip">Asian Paints</span>
-          <span class="hero-chip">Kotak</span>
-          <span class="hero-chip">Ashok Leyland</span>
+        <div class="hero-fact">
+          <div class="n">~99%</div>
+          <div class="d">On-time delivery rate, within 2 business days</div>
         </div>
       </div>
     </div>
@@ -397,43 +401,29 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
     <div class="wrap">
       <div class="stats-inline">
         <div class="stat-inline"><span class="n">13+</span><span class="d">Years of enterprise program management</span></div>
-        <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-inline"><span class="n">19,000+</span><span class="d">Pin codes — pan-India fulfilment</span></div>
-        <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-inline"><span class="n">1,000+</span><span class="d">SKU reward catalog</span></div>
-        <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-inline"><span class="n">40%</span><span class="d">QoQ sales growth achieved</span></div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ── PROOF MARQUEE ─────────────────────────────────────── -->
-<div class="marquee-section" aria-label="Trusted by India's leading corporates">
-  <p class="marquee-label">Trusted by India's leading corporates</p>
-  <div style="overflow:hidden">
-    <div class="marquee-track">
-      <span class="marquee-name">Tata Capital Housing Finance</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Larsen &amp; Toubro</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Asian Paints</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Kotak Life Insurance</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Ashok Leyland</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Birla Sun Life</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Nayara Energy</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Times Group</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Power Grid Corporation of India</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Bain &amp; Company</span><span class="marquee-dot">&middot;</span>
-      <!-- duplicate set for seamless loop -->
-      <span class="marquee-name">Tata Capital Housing Finance</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Larsen &amp; Toubro</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Asian Paints</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Kotak Life Insurance</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Ashok Leyland</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Birla Sun Life</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Nayara Energy</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Times Group</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Power Grid Corporation of India</span><span class="marquee-dot">&middot;</span>
-      <span class="marquee-name">Bain &amp; Company</span><span class="marquee-dot">&middot;</span>
+<!-- ── CLIENT ROSTER ─────────────────────────────────────── -->
+<div class="clients">
+  <div class="wrap">
+    <p class="clients-label">Trusted by India's leading corporates</p>
+    <div class="clients-grid" data-reveal>
+      <div class="client-cell">Tata Capital Housing Finance</div>
+      <div class="client-cell">Larsen &amp; Toubro</div>
+      <div class="client-cell">Asian Paints</div>
+      <div class="client-cell">Kotak Life Insurance</div>
+      <div class="client-cell">Ashok Leyland</div>
+      <div class="client-cell">Birla Sun Life</div>
+      <div class="client-cell">Nayara Energy</div>
+      <div class="client-cell">Times Group</div>
+      <div class="client-cell">Power Grid Corporation</div>
+      <div class="client-cell">Bain &amp; Company</div>
     </div>
   </div>
 </div>
@@ -442,7 +432,8 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 <section>
   <div class="wrap">
     <div class="section-header">
-      <h2>Most channel incentive programs <span class="serif">fail quietly.</span></h2>
+      <p class="eyebrow">The Problem</p>
+      <h2>Most channel incentive programs fail quietly.</h2>
     </div>
     <div class="problem-grid" data-reveal>
       <div class="problem-text">
@@ -451,7 +442,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <p>Most companies lack the in-house machinery to do all four simultaneously. <strong>GroRewardz is that machinery.</strong></p>
       </div>
       <div class="problem-callout">
-        <p class="problem-callout-quote">&ldquo;In every program we have taken over from a previous vendor, the failure point was the same: delivery timelines, reward relevance, or no real-time visibility into what was working.&rdquo;</p>
+        <p class="problem-quote">&ldquo;In every program we have taken over from a previous vendor, the failure point was the same: delivery timelines, reward relevance, or no real-time visibility into what was working.&rdquo;</p>
         <div class="problem-callout-stat">
           <div class="n">13+</div>
           <div class="d">Years solving exactly this problem for India's largest corporates</div>
@@ -462,10 +453,11 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 </section>
 
 <!-- ── SERVICES ──────────────────────────────────────────── -->
-<section id="services" class="section-alt">
+<section id="services" class="section-gray">
   <div class="wrap">
     <div class="section-header">
-      <h2>One partner for the <span class="serif">entire</span> program lifecycle.</h2>
+      <p class="eyebrow">What We Do</p>
+      <h2>One partner for the entire program lifecycle.</h2>
       <p class="lead">GroRewardz operates as a managed service — not a software vendor. We own the outcomes, not just the platform.</p>
     </div>
 
@@ -481,7 +473,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <div class="service-panel-text">
           <h3>Full-cycle loyalty programs for your channel</h3>
           <p>End-to-end program design and execution for dealers, retailers and field influencers. Includes contest design, leaderboards, performance dashboards, participant enrolment, KYC, and automated SMS/email engagement — managed entirely by our team.</p>
-          <span class="highlight-pill">40% QoQ sales growth achieved for one client</span>
+          <span class="pill">40% QoQ sales growth achieved for one client</span>
         </div>
         <div class="service-visual">
           <div class="big">40%</div>
@@ -501,7 +493,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <div class="service-panel-text">
           <h3>Thousands of payments. One spreadsheet.</h3>
           <p>Corporate clients upload a spreadsheet. We process payments to thousands of UPI IDs automatically via our Razorpay-integrated platform — no manual banking, no delays, full MIS on every transaction.</p>
-          <span class="highlight-pill">Zero IT integration required on the client side</span>
+          <span class="pill">Zero IT integration required on the client side</span>
         </div>
         <div class="service-visual">
           <div class="big">0</div>
@@ -519,7 +511,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <div class="service-panel-text">
           <h3>50+ brands. Digital delivery in 2 business days.</h3>
           <p>We source eGVs from Amazon, Flipkart, Myntra, BookMyShow and 50+ other brands at competitive rates, and distribute them digitally to end users — with full tracking and MIS reporting.</p>
-          <span class="highlight-pill">Digital delivery within 2 business days</span>
+          <span class="pill">Digital delivery within 2 business days</span>
         </div>
         <div class="service-visual">
           <div class="big">50+</div>
@@ -538,7 +530,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <div class="service-panel-text">
           <h3>Your brand. Our platform. Fully managed.</h3>
           <p>Deploy a fully branded loyalty portal for your channel partners — mobile app, web portal, SMS redemption, and an admin MIS panel. SSO-integrated, customised to your brand, and managed entirely by GroRewardz.</p>
-          <span class="highlight-pill">115,000+ participants across one program</span>
+          <span class="pill">115,000+ participants across one program</span>
         </div>
         <div class="service-visual">
           <div class="big">115K+</div>
@@ -560,27 +552,28 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 <section id="process">
   <div class="wrap">
     <div class="section-header">
-      <h2>From brief to fulfilment in <span class="serif">four steps.</span></h2>
+      <p class="eyebrow">How It Works</p>
+      <h2>From brief to fulfilment in four steps.</h2>
       <p class="lead">We have run this process for insurance companies, cement manufacturers, automotive distributors and NBFCs. The program is tailored entirely to your channel structure.</p>
     </div>
     <div class="process-grid" data-stagger>
       <div class="process-step">
-        <div class="step-num">1</div>
+        <div class="step-num">01</div>
         <h3>Program Design</h3>
         <p>A complimentary 2-hour discovery workshop. Your channel structure, sales targets and reward preferences shape every element of the program.</p>
       </div>
       <div class="process-step">
-        <div class="step-num">2</div>
+        <div class="step-num">02</div>
         <h3>Platform Setup</h3>
         <p>We configure the platform with your branding, participant roster, reward catalog and campaign rules. KYC, SSO and performance tiers — handled entirely by us.</p>
       </div>
       <div class="process-step">
-        <div class="step-num">3</div>
+        <div class="step-num">03</div>
         <h3>Ongoing Management</h3>
         <p>Points allocation, reward sourcing, vendor coordination, helpdesk support and communications. We run the program so your team doesn't have to.</p>
       </div>
       <div class="process-step">
-        <div class="step-num">4</div>
+        <div class="step-num">04</div>
         <h3>Analytics &amp; MIS</h3>
         <p>Real-time dashboards for admin teams and regional managers. Redemption data, points flow, participant engagement — all in one place.</p>
       </div>
@@ -588,12 +581,14 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   </div>
 </section>
 
-
 <!-- ── PROGRAMS ──────────────────────────────────────────── -->
-<section id="programs" class="programs">
+<section id="programs" class="section-navy">
   <div class="wrap">
-    <h2>Trusted with some of India's <span class="serif" style="color:var(--gold-lt)">largest</span> channel programs</h2>
-    <p class="lead">A sample of the loyalty programs GroRewardz manages end-to-end today, across BFSI, cement, automotive, electricals, NBFC and employee rewards.</p>
+    <div class="section-header">
+      <p class="eyebrow eyebrow-light">Live Programs</p>
+      <h2>Trusted with some of India's largest channel programs</h2>
+      <p class="lead">A sample of the loyalty programs GroRewardz manages end-to-end today, across BFSI, cement, automotive, electricals, NBFC and employee rewards.</p>
+    </div>
     <div class="prog-grid" data-stagger>
       <div class="prog-card">
         <p class="prog-tag">BFSI &middot; Top 5 Insurance Company</p>
@@ -636,23 +631,25 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 </section>
 
 <!-- ── CASE SPOTLIGHT ─────────────────────────────────────── -->
-<section class="spotlight">
+<section class="spotlight section-gray">
   <div class="wrap">
     <div class="spotlight-stat" data-reveal>
       <b>10,000+</b>
       <span>Requests fulfilled across Tata Capital Housing Finance Limited branches through &ldquo;Office Genie&rdquo;</span>
     </div>
-    <div>
-      <h2>&ldquo;Office <span class="serif">Genie</span>&rdquo; &mdash; Tata Capital Housing Finance</h2>
+    <div data-reveal>
+      <p class="eyebrow">Case Spotlight</p>
+      <h2>&ldquo;Office Genie&rdquo; — Tata Capital Housing Finance</h2>
       <p class="lead">Office Genie empowers workspaces across India, delivering essentials to 400+ Tata Capital Housing Finance branches. A national-level initiative GroRewardz is proud to run end-to-end — from demand capture to last-mile delivery.</p>
     </div>
   </div>
 </section>
 
 <!-- ── CASE STUDIES ──────────────────────────────────────── -->
-<section id="casestudies" class="section-alt">
+<section id="casestudies">
   <div class="wrap">
     <div class="section-header">
+      <p class="eyebrow">Case Studies</p>
       <h2>Three programs. Numbers from the field.</h2>
       <p class="lead">A cross-section of programs GroRewardz designs and operates end-to-end — BFSI, manufacturing, energy. Real data, no projections.</p>
     </div>
@@ -726,10 +723,13 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 </section>
 
 <!-- ── FULFILMENT ────────────────────────────────────────── -->
-<section id="fulfilment">
+<section id="fulfilment" class="section-gray">
   <div class="wrap">
-    <h2>Reward options for <span class="serif">urban tastes</span> and rural last-mile delivery</h2>
-    <p class="lead">A wide range of physical and digital fulfilment options, sourced, aggregated and delivered pan-India — 19,000+ pin codes, ~99% within 2 business days.</p>
+    <div class="section-header">
+      <p class="eyebrow">Fulfilment</p>
+      <h2>Reward options for urban tastes and rural last-mile delivery</h2>
+      <p class="lead">A wide range of physical and digital fulfilment options, sourced, aggregated and delivered pan-India — 19,000+ pin codes, ~99% within 2 business days.</p>
+    </div>
     <div class="fulfil-grid" data-stagger>
       <div class="fulfil-panel">
         <h3>Physical Rewards</h3>
@@ -757,11 +757,44 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   </div>
 </section>
 
+<!-- ── AI CONSULTING ─────────────────────────────────────── -->
+<section id="ai-consulting">
+  <div class="wrap">
+    <div class="section-header" data-reveal>
+      <p class="eyebrow">Enterprise AI</p>
+      <h2>AI that fits your operations — and changes what they're capable of.</h2>
+      <p class="lead">We help mid-to-large enterprises identify, deploy and measure AI systems that reduce operational costs, surface hidden revenue, and remove workflow bottlenecks that have become invisible.</p>
+    </div>
+    <div class="ai-grid" data-stagger>
+      <div class="ai-card">
+        <p class="ai-tag">01</p>
+        <h3>Process Automation</h3>
+        <p>The highest-cost manual work in most enterprises — reporting, reconciliation, approvals, partner communications — can run end-to-end on AI pipelines. We map the workflow, build the system, and hand you something that runs without supervision.</p>
+      </div>
+      <div class="ai-card">
+        <p class="ai-tag">02</p>
+        <h3>Revenue Intelligence</h3>
+        <p>Your data already signals which customers are drifting, which segments are underperforming, which products have cross-sell potential. AI surfaces those signals before they become decisions that are too late to act on.</p>
+      </div>
+      <div class="ai-card">
+        <p class="ai-tag">03</p>
+        <h3>System Integration</h3>
+        <p>Connect your ERP, CRM and analytics stack to AI models that reason over live data — without replacing the systems your teams already trust. Most integrations are non-disruptive and run in parallel with current workflows.</p>
+      </div>
+    </div>
+    <div class="ai-bottom" data-reveal>
+      <p class="ai-bottom-text">We scope every engagement before we commit. If the ROI case isn't clear within the first two conversations, we say so — no proposal, no obligation. Most engagements reach measurable outcomes within 8–12 weeks of kickoff.</p>
+      <a href="#contact" class="btn btn-outline">Book an AI Discovery Call</a>
+    </div>
+  </div>
+</section>
+
 <!-- ── ABOUT ─────────────────────────────────────────────── -->
-<section id="about">
+<section id="about" class="section-gray">
   <div class="wrap">
     <div class="section-header">
-      <h2>Part of a legacy that goes back to <span class="serif">1943.</span></h2>
+      <p class="eyebrow">About</p>
+      <h2>Part of a legacy that goes back to 1943.</h2>
     </div>
     <div class="about-grid" data-reveal>
       <div class="about-text">
@@ -789,45 +822,14 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   </div>
 </section>
 
-<!-- ── AI CONSULTING ─────────────────────────────────────── -->
-<section id="ai-consulting" class="section-alt">
-  <div class="wrap">
-    <div class="section-header" data-reveal>
-      <h2>AI that fits your operations — and changes what they're capable of.</h2>
-      <p class="lead">We help mid-to-large enterprises identify, deploy and measure AI systems that reduce operational costs, surface hidden revenue, and remove workflow bottlenecks that have become invisible.</p>
-    </div>
-    <div class="ai-grid" data-stagger>
-      <div class="ai-card">
-        <p class="ai-tag">01</p>
-        <h3>Process Automation</h3>
-        <p>The highest-cost manual work in most enterprises — reporting, reconciliation, approvals, partner communications — can run end-to-end on AI pipelines. We map the workflow, build the system, and hand you something that runs without supervision.</p>
-      </div>
-      <div class="ai-card">
-        <p class="ai-tag">02</p>
-        <h3>Revenue Intelligence</h3>
-        <p>Your data already signals which customers are drifting, which segments are underperforming, which products have cross-sell potential. AI surfaces those signals before they become decisions that are too late to act on.</p>
-      </div>
-      <div class="ai-card">
-        <p class="ai-tag">03</p>
-        <h3>System Integration</h3>
-        <p>Connect your ERP, CRM and analytics stack to AI models that reason over live data — without replacing the systems your teams already trust. Most integrations are non-disruptive and run in parallel with current workflows.</p>
-      </div>
-    </div>
-    <div class="ai-bottom" data-reveal>
-      <p class="ai-bottom-text">We scope every engagement before we commit. If the ROI case isn't clear within the first two conversations, we say so — no proposal, no obligation. Most engagements reach measurable outcomes within 8–12 weeks of kickoff.</p>
-      <a href="#contact" class="btn btn-primary">Book an AI Discovery Call</a>
-    </div>
-  </div>
-</section>
-
 <!-- ── CTA BAND ──────────────────────────────────────────── -->
 <section class="ctaband">
   <div class="wrap">
-    <h2>A complimentary, no-obligation <span class="serif">Discovery Call</span></h2>
+    <h2>A complimentary, no-obligation Discovery Call</h2>
     <p class="lead">Brainstorm your specific channel engagement challenge with our GroRewardz experts — no strings attached. Most programs go live within 4&ndash;6 weeks of kickoff.</p>
     <div class="cta-buttons">
-      <a href="mailto:loyalty@grorewardz.com" class="btn btn-white">Email loyalty@grorewardz.com</a>
-      <a href="https://wa.me/919920727756" class="btn btn-ghost-dark" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a href="mailto:loyalty@grorewardz.com" class="btn btn-on-blue">Email loyalty@grorewardz.com</a>
+      <a href="https://wa.me/919920727756" class="btn btn-outline-light" target="_blank" rel="noopener">WhatsApp Us</a>
     </div>
     <div class="contact-details">
       <span class="contact-item">Sales: <a href="mailto:loyalty@grorewardz.com">loyalty@grorewardz.com</a> &middot; <a href="tel:+919920727756">+91 99207 27756</a></span>
@@ -841,15 +843,18 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-info">
-        <h2>Get in <span class="serif">touch</span></h2>
-        <p><strong>Address:</strong> Shop 8, Ground Floor, St. Michael Bhavan, LJ Road, Mahim (W), Mumbai, 400050, Maharashtra, India</p>
-        <p><strong>Loyalty enquiries:</strong> <a href="mailto:loyalty@grorewardz.com">loyalty@grorewardz.com</a></p>
-        <p><strong>Helpdesk:</strong> <a href="mailto:helpdesk@grorewardz.com">helpdesk@grorewardz.com</a></p>
-        <p><strong>Operations:</strong> <a href="mailto:ops@grorewardz.com">ops@grorewardz.com</a></p>
-        <p><strong>Phone / WhatsApp:</strong> <a href="tel:+919920727756">+91 99207 27756</a></p>
-        <p><strong>Helpdesk line:</strong> <a href="tel:+919819775539">+91 98197 75539</a></p>
-        <p style="margin-top:14px;color:var(--muted);font-size:.875rem">Closed on National Holidays &amp; Bank Holidays.</p>
-        <a href="mailto:loyalty@grorewardz.com" class="btn btn-primary" style="margin-top:20px">Book Your Discovery Call</a>
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <dl>
+          <div class="contact-row"><dt>Address</dt><dd>Shop 8, Ground Floor, St. Michael Bhavan, LJ Road, Mahim (W), Mumbai, 400050, Maharashtra, India</dd></div>
+          <div class="contact-row"><dt>Loyalty enquiries</dt><dd><a href="mailto:loyalty@grorewardz.com">loyalty@grorewardz.com</a></dd></div>
+          <div class="contact-row"><dt>Helpdesk</dt><dd><a href="mailto:helpdesk@grorewardz.com">helpdesk@grorewardz.com</a></dd></div>
+          <div class="contact-row"><dt>Operations</dt><dd><a href="mailto:ops@grorewardz.com">ops@grorewardz.com</a></dd></div>
+          <div class="contact-row"><dt>Phone / WhatsApp</dt><dd><a href="tel:+919920727756">+91 99207 27756</a></dd></div>
+          <div class="contact-row"><dt>Helpdesk line</dt><dd><a href="tel:+919819775539">+91 98197 75539</a></dd></div>
+          <div class="contact-row"><dt>Hours</dt><dd>Closed on National Holidays &amp; Bank Holidays</dd></div>
+        </dl>
+        <a href="mailto:loyalty@grorewardz.com" class="btn btn-primary" style="margin-top:32px">Book Your Discovery Call</a>
       </div>
       <iframe loading="lazy" class="contact-map"
         src="https://www.google.com/maps?q=St.+Michael+Bhavan,+LJ+Road,+Mahim+West,+Mumbai,+400050&output=embed"
@@ -865,20 +870,21 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="brand">
-          <svg class="brand-mark" width="30" height="30" viewBox="0 0 56 56" aria-hidden="true">
-            <rect width="56" height="56" rx="14" fill="#241150"/>
-            <rect x="14" y="32" width="7" height="12" rx="1.5" fill="#f0dcae"/>
-            <rect x="24.5" y="24" width="7" height="20" rx="1.5" fill="#f0dcae"/>
-            <rect x="35" y="14" width="7" height="30" rx="1.5" fill="#c9962e"/>
+          <svg class="brand-mark" width="28" height="28" viewBox="0 0 56 56" aria-hidden="true">
+            <rect width="56" height="56" fill="#0A2E44"/>
+            <rect x="14" y="32" width="7" height="12" fill="#ffffff"/>
+            <rect x="24.5" y="24" width="7" height="20" fill="#ffffff"/>
+            <rect x="35" y="14" width="7" height="30" fill="#00A9F4"/>
           </svg>
           Gro<span>Rewardz</span>
         </div>
         <p>GroValue Industries Pvt Ltd &middot; Part of Aranha Agencies Group (Est. 1943)<br>
-        Mahim (W), Mumbai &middot; <a href="mailto:loyalty@grorewardz.com" style="color:var(--gold-lt)">loyalty@grorewardz.com</a></p>
+        Mahim (W), Mumbai &middot; <a href="mailto:loyalty@grorewardz.com">loyalty@grorewardz.com</a></p>
       </div>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Conditions</a>
+        <a href="#services">Services</a>
+        <a href="#ai-consulting">AI Consulting</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -896,7 +902,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
     entries => entries.forEach(e => {
       if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); }
     }),
-    { threshold: 0.07, rootMargin: '0px 0px -36px 0px' }
+    { threshold: 0.07, rootMargin: '0px 0px -40px 0px' }
   );
   document.querySelectorAll('[data-reveal],[data-stagger]').forEach(el => obs.observe(el));
 })();
@@ -919,7 +925,6 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   });
 })();
 </script>
-
 
 <!-- Vercel Analytics + Speed Insights -->
 <script defer src="/_vercel/insights/script.js"></script>
