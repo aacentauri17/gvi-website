@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GroRewardz — B2B Channel Loyalty &amp; Rewards Platform | GroValue Industries, Mumbai</title>
-<meta name="description" content="GroRewardz designs, operates and fulfils end-to-end B2B channel loyalty programs for India's mid-to-large corporates — delivering 40%+ QoQ sales growth for dealers, retailers and influencers. Pan-India reward fulfilment across 19,000+ pin codes. Trusted by Tata Capital, L&T, Asian Paints and more. Book a free discovery call today.">
-<meta name="keywords" content="B2B loyalty program India, channel loyalty software, dealer incentive program, retailer rewards platform, influencer loyalty program, loyalty program management company Mumbai, GroRewardz, GroValue Industries, bulk UPI payment, eGift voucher procurement, channel partner rewards, sales incentive program India">
+<meta name="description" content="GroRewardz designs, operates and fulfils B2B channel loyalty programs and AI integration systems for India's mid-to-large corporates — 40%+ QoQ sales growth, 19,000+ pin code fulfilment, AI-driven cost reduction. Trusted by Tata Capital, L&T, Asian Paints. Book a free discovery call.">
+<meta name="keywords" content="B2B loyalty program India, channel loyalty software, dealer incentive program, retailer rewards platform, influencer loyalty program, loyalty program management company Mumbai, GroRewardz, GroValue Industries, bulk UPI payment, eGift voucher procurement, channel partner rewards, sales incentive program India, AI consulting India, enterprise AI integration Mumbai, AI automation enterprise India, AI cost reduction BFSI manufacturing">
 <link rel="canonical" href="https://www.grorewardz.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GroRewardz — B2B Channel Loyalty &amp; Rewards Platform | GroValue Industries">
@@ -39,7 +39,13 @@
   "areaServed": "IN",
   "founder": { "@type": "Person", "name": "Rahul Aranha" },
   "foundingDate": "2013",
-  "numberOfEmployees": { "@type": "QuantitativeValue", "value": "11" }
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": "11" },
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"B2B Channel Loyalty Programs","description":"End-to-end design, management and reward fulfilment for dealer, retailer and influencer loyalty programs across India."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bulk UPI Payments","description":"Automated bulk UPI payment processing for corporate incentive and commission payouts via Razorpay."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"eGift Voucher Procurement","description":"Sourcing and digital delivery of eGift vouchers from Amazon, Flipkart, Myntra and 50+ brand partners."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI System Integration & Consulting","description":"AI workflow automation, revenue intelligence and system integration for mid-to-large enterprises in BFSI, manufacturing and FMCG sectors in India."}}
+  ]
 }
 </script>
 <style>
@@ -108,25 +114,23 @@ h2 .serif{color:var(--indigo)}
 .btn-ghost:hover{background:rgba(61,26,120,.06);border-color:var(--indigo)}
 .btn-white{background:#fff;color:var(--indigo-dk);border-color:#fff}
 .btn-white:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
+.btn:active{transform:scale(0.97);transition:transform 80ms ease-out,background .2s,border-color .2s,color .2s,box-shadow .2s}
 
 /* ── NAV ────────────────────────────────────────────────── */
-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.88);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.28rem;letter-spacing:-.025em;color:var(--ink)}
 .brand span{color:var(--gold-dk)}
 .brand-mark{flex-shrink:0;display:block}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{font-size:.875rem;font-weight:600;color:var(--muted);min-height:44px;display:inline-flex;align-items:center;transition:color .2s}
-.nav-links a:hover{color:var(--indigo)}
+.nav-links a{font-size:.875rem;font-weight:500;color:rgba(21,15,43,.6);min-height:44px;display:inline-flex;align-items:center;transition:color .15s}
+.nav-links a:hover{color:var(--ink)}
 @media(max-width:900px){.nav-links{display:none}}
 
 /* ── HERO ───────────────────────────────────────────────── */
 .hero{position:relative;overflow:hidden;color:#fbf9ff;background:var(--hero-grad)}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 90% at 85% -10%,rgba(122,82,196,.35) 0%,rgba(122,82,196,0) 55%),radial-gradient(90% 70% at 5% 110%,rgba(201,150,46,.18) 0%,rgba(201,150,46,0) 58%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;padding:108px 0 88px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:22px;padding:6px 14px;border:1.5px solid rgba(240,220,174,.3);border-radius:20px;background:rgba(201,150,46,.12)}
-.hero-eyebrow-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s ease-in-out infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 .hero h1{font-size:clamp(2.2rem,2.4rem + 1.5vw,3.8rem);font-weight:600;letter-spacing:-.02em;max-width:18ch;color:#fff;margin-bottom:18px}
 .hero h1 .serif{color:var(--gold-lt);font-size:1.02em}
 .hero-sub{font-size:1.1rem;line-height:1.7;max-width:52ch;color:#dcd4ea;margin-bottom:32px}
@@ -198,12 +202,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.94);backdrop-
 .process-step h3{font-size:1.06rem;margin-bottom:10px;color:var(--ink)}
 .process-step p{font-size:.875rem;color:var(--muted);line-height:1.7}
 
-/* ── STATS ROW ──────────────────────────────────────────── */
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--line);gap:1px}
-.stat-block{background:var(--paper);padding:40px 30px;transition:background .2s}
-.stat-block:hover{background:var(--cream)}
-.stat-block .big-num{font-family:'Geist',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1;margin-bottom:10px;color:var(--indigo);letter-spacing:-.02em}
-.stat-block .stat-label{font-size:.875rem;color:var(--muted);line-height:1.55}
 
 /* ── PROGRAMS ───────────────────────────────────────────── */
 .programs{background:var(--ink);color:#e9e4f2}
@@ -240,16 +238,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.94);backdrop-
 .case-body{padding:20px 26px 24px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
 .case-body p{font-size:.875rem;color:var(--muted);line-height:1.65;margin-bottom:14px}
 
-/* ── TESTIMONIALS ───────────────────────────────────────── */
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.testi-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:30px;display:flex;flex-direction:column;gap:20px;transition:box-shadow .25s,border-color .25s}
-.testi-card:hover{box-shadow:0 4px 24px rgba(21,15,43,.07);border-color:rgba(61,26,120,.2)}
-.testi-stars{display:flex;gap:3px;color:var(--gold);font-size:15px}
-.testi-quote{font-family:'Geist',sans-serif;font-weight:500;font-size:1.02rem;color:var(--ink);line-height:1.65;flex:1}
-.testi-author{display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--line)}
-.testi-avatar{width:42px;height:42px;border-radius:50%;background:rgba(61,26,120,.1);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:700;font-size:.95rem;color:var(--indigo);flex-shrink:0}
-.testi-name{font-size:.875rem;font-weight:700;color:var(--ink)}
-.testi-role{font-size:.75rem;color:var(--muted);margin-top:2px}
+/* ── AI CONSULTING ──────────────────────────────────────── */
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
+.ai-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:32px 28px;transition:box-shadow .25s,transform .25s,border-color .25s}
+.ai-card:hover{box-shadow:0 8px 32px rgba(21,15,43,.1);transform:translateY(-3px);border-color:rgba(61,26,120,.2)}
+.ai-tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--indigo-lt);margin-bottom:14px}
+.ai-card h3{font-size:1.1rem;margin-bottom:10px;color:var(--ink);letter-spacing:-.015em}
+.ai-card p{font-size:.9rem;color:var(--muted);line-height:1.7}
+.ai-bottom{display:flex;align-items:center;gap:36px;flex-wrap:wrap;padding-top:40px;border-top:1px solid var(--line)}
+.ai-bottom-text{font-size:.95rem;color:var(--muted);line-height:1.75;flex:1;min-width:240px}
 
 /* ── FULFILMENT ─────────────────────────────────────────── */
 .fulfil-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;background:var(--line)}
@@ -318,6 +315,8 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   .spotlight .wrap{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .stats-inline{justify-content:flex-start}
+  .ai-grid{grid-template-columns:1fr 1fr}
+  .ai-bottom{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:600px){
   .wrap{padding:0 20px}
@@ -328,6 +327,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   .cta-buttons{flex-direction:column;align-items:center}
   .case-grid{max-width:100%}
   .prog-grid{grid-template-columns:1fr}
+  .ai-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -349,6 +349,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
       <li><a href="#services">Services</a></li>
       <li><a href="#process">How It Works</a></li>
       <li><a href="#programs">Programs</a></li>
+      <li><a href="#ai-consulting">AI Consulting</a></li>
       <li><a href="#about">About</a></li>
     </ul>
     <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
@@ -450,7 +451,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
         <p>Most companies lack the in-house machinery to do all four simultaneously. <strong>GroRewardz is that machinery.</strong></p>
       </div>
       <div class="problem-callout">
-        <p class="problem-callout-quote">&ldquo;The average channel loyalty program loses 40&ndash;60% of its impact to execution gaps &mdash; not budget.&rdquo;</p>
+        <p class="problem-callout-quote">&ldquo;In every program we have taken over from a previous vendor, the failure point was the same: delivery timelines, reward relevance, or no real-time visibility into what was working.&rdquo;</p>
         <div class="problem-callout-stat">
           <div class="n">13+</div>
           <div class="d">Years solving exactly this problem for India's largest corporates</div>
@@ -587,32 +588,6 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
   </div>
 </section>
 
-<!-- ── STATS ─────────────────────────────────────────────── -->
-<section class="section-alt">
-  <div class="wrap">
-    <div class="section-header">
-      <h2>Scale that enterprise programs demand.</h2>
-    </div>
-    <div class="stats-row" data-stagger>
-      <div class="stat-block">
-        <div class="big-num">13+</div>
-        <div class="stat-label">Years of enterprise program management</div>
-      </div>
-      <div class="stat-block">
-        <div class="big-num">19,000+</div>
-        <div class="stat-label">Pin codes for pan-India reward delivery</div>
-      </div>
-      <div class="stat-block">
-        <div class="big-num">1,000+</div>
-        <div class="stat-label">SKU reward catalog — physical and digital</div>
-      </div>
-      <div class="stat-block">
-        <div class="big-num">~99%</div>
-        <div class="stat-label">On-time delivery rate, within 2 business days</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ── PROGRAMS ──────────────────────────────────────────── -->
 <section id="programs" class="programs">
@@ -678,8 +653,8 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 <section id="casestudies" class="section-alt">
   <div class="wrap">
     <div class="section-header">
-      <h2>Programs with <span class="serif">proven impact.</span></h2>
-      <p class="lead">We have designed and operated channel loyalty programs across BFSI, manufacturing and energy — for some of India's most recognisable brands.</p>
+      <h2>Three programs. Numbers from the field.</h2>
+      <p class="lead">A cross-section of programs GroRewardz designs and operates end-to-end — BFSI, manufacturing, energy. Real data, no projections.</p>
     </div>
     <div class="case-grid" data-stagger>
 
@@ -751,7 +726,7 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
 </section>
 
 <!-- ── FULFILMENT ────────────────────────────────────────── -->
-<section id="fulfilment" class="section-alt">
+<section id="fulfilment">
   <div class="wrap">
     <h2>Reward options for <span class="serif">urban tastes</span> and rural last-mile delivery</h2>
     <p class="lead">A wide range of physical and digital fulfilment options, sourced, aggregated and delivered pan-India — 19,000+ pin codes, ~99% within 2 business days.</p>
@@ -810,6 +785,37 @@ footer{background:var(--ink);color:#a89fc0;padding:44px 0;font-size:.86rem}
           <li>6 Sigma process optimisation certified</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI CONSULTING ─────────────────────────────────────── -->
+<section id="ai-consulting" class="section-alt">
+  <div class="wrap">
+    <div class="section-header" data-reveal>
+      <h2>AI that fits your operations — and changes what they're capable of.</h2>
+      <p class="lead">We help mid-to-large enterprises identify, deploy and measure AI systems that reduce operational costs, surface hidden revenue, and remove workflow bottlenecks that have become invisible.</p>
+    </div>
+    <div class="ai-grid" data-stagger>
+      <div class="ai-card">
+        <p class="ai-tag">01</p>
+        <h3>Process Automation</h3>
+        <p>The highest-cost manual work in most enterprises — reporting, reconciliation, approvals, partner communications — can run end-to-end on AI pipelines. We map the workflow, build the system, and hand you something that runs without supervision.</p>
+      </div>
+      <div class="ai-card">
+        <p class="ai-tag">02</p>
+        <h3>Revenue Intelligence</h3>
+        <p>Your data already signals which customers are drifting, which segments are underperforming, which products have cross-sell potential. AI surfaces those signals before they become decisions that are too late to act on.</p>
+      </div>
+      <div class="ai-card">
+        <p class="ai-tag">03</p>
+        <h3>System Integration</h3>
+        <p>Connect your ERP, CRM and analytics stack to AI models that reason over live data — without replacing the systems your teams already trust. Most integrations are non-disruptive and run in parallel with current workflows.</p>
+      </div>
+    </div>
+    <div class="ai-bottom" data-reveal>
+      <p class="ai-bottom-text">We scope every engagement before we commit. If the ROI case isn't clear within the first two conversations, we say so — no proposal, no obligation. Most engagements reach measurable outcomes within 8–12 weeks of kickoff.</p>
+      <a href="#contact" class="btn btn-primary">Book an AI Discovery Call</a>
     </div>
   </div>
 </section>
