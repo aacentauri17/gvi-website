@@ -99,17 +99,19 @@ h3{font-size:1.22rem;line-height:1.32;font-weight:600;letter-spacing:-.018em}
 
 .lead{color:var(--mute);max-width:58ch;font-size:1.19rem;margin-top:24px;line-height:1.65}
 
-/* ── Shiny text ──────────────────────────────────────────
-   CSS port of the react-bits ShinyText component — same idea
-   (a highlight band sweeps across a gradient-clipped text fill,
-   then holds off-screen before repeating) without the React/
-   Motion dependency, since this site ships as one static file.
-   color:#fff is a fallback for browsers without background-clip:
-   text; -webkit-text-fill-color:transparent hides it where the
-   clip is supported and the animated gradient shows through.
-   Global prefers-reduced-motion rule already freezes this. ── */
-.shiny-text{
-  color:#fff;
+/* ── Shiny text (one-shot) ───────────────────────────────
+   CSS port of the react-bits ShinyText component, played once
+   rather than looped. The heading has NO special class at rest
+   — it's plain solid color:#fff, so it is always guaranteed to
+   render correctly with zero risk of the clip-text trick leaving
+   it stuck transparent. JS adds .shine-once after a short delay
+   to play a single sweep, then removes the class again on
+   animationend, returning the heading to that same plain state.
+   Duration is 2.4s (an original ~1.8s sweep, slowed 35% per
+   feedback). Global prefers-reduced-motion rule forces near-zero
+   duration, so reduced-motion users barely see the class attach
+   before it's removed. ── */
+.shine-once{
   background-image:linear-gradient(120deg,
     #fff 0%, #fff 42%,
     var(--cyan) 50%,
@@ -119,12 +121,11 @@ h3{font-size:1.22rem;line-height:1.32;font-weight:600;letter-spacing:-.018em}
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:shiny-sweep 5s ease-in-out infinite;
+  animation:shiny-sweep-once 2.4s ease-in-out 1;
 }
-@keyframes shiny-sweep{
+@keyframes shiny-sweep-once{
   0%{background-position:170% center}
-  45%{background-position:-70% center}
-  100%{background-position:-70% center}
+  100%{background-position:-170% center}
 }
 
 /* ── Layout ────────────────────────────────────────────── */
@@ -448,7 +449,7 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   <div class="hero-body">
     <div class="wrap">
       <div class="hero-inner">
-        <h1 class="shiny-text">Channel loyalty programs that make your dealers choose you every time.</h1>
+        <h1 id="hero-h1">Channel loyalty programs that make your dealers choose you every time.</h1>
         <p class="hero-sub">We design, run and fulfil loyalty programs for dealers, retailers and influencers at India's largest corporates. Our team handles every part of it, from the reward catalog to last-mile delivery across 19,000 pin codes.</p>
         <div class="hero-ctas">
           <a href="#contact-form" class="btn btn-primary">Book a Free Discovery Call</a>
@@ -983,6 +984,24 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   const sync = () => nav.classList.toggle('scrolled', window.scrollY > 40);
   sync();
   window.addEventListener('scroll', sync, { passive: true });
+})();
+</script>
+
+<!-- ── HERO SHINE (one-shot) ─────────────────────────────── -->
+<script>
+(function(){
+  const h1 = document.getElementById('hero-h1');
+  if (!h1) return;
+  const SWEEP_MS = 2400; // keep in sync with .shine-once's animation-duration
+  const cleanup = () => h1.classList.remove('shine-once');
+  // animationend is the normal path; the timeout is a fallback in case
+  // the event doesn't fire (backgrounded tab, older WebView, etc.) —
+  // classList.remove is a no-op if cleanup already ran, so both are safe.
+  h1.addEventListener('animationend', cleanup);
+  setTimeout(() => {
+    h1.classList.add('shine-once');
+    setTimeout(cleanup, SWEEP_MS + 150);
+  }, 1400);
 })();
 </script>
 
