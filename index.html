@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GroRewardz — B2B Channel Loyalty &amp; Rewards Platform | GroValue Industries, Mumbai</title>
-<meta name="description" content="GroRewardz designs, runs and fulfils B2B channel loyalty programs and AI integration for India's mid-to-large corporates. 40% QoQ sales growth, fulfilment across 19,000 pin codes. Trusted by Tata Capital, L&T and Asian Paints.">
-<meta name="keywords" content="B2B loyalty program India, channel loyalty software, dealer incentive program, retailer rewards platform, influencer loyalty program, loyalty program management company Mumbai, GroRewardz, GroValue Industries, bulk UPI payment, eGift voucher procurement, channel partner rewards, sales incentive program India, AI consulting India, enterprise AI integration Mumbai, AI automation enterprise India, AI cost reduction BFSI manufacturing">
+<meta name="description" content="GroRewardz designs, runs and fulfils B2B channel loyalty programs for India's mid-to-large corporates — 40% QoQ sales growth, fulfilment across 19,000 pin codes, bulk UPI payments and eGift vouchers. Trusted by Tata Capital, L&T and Asian Paints.">
+<meta name="keywords" content="B2B loyalty program India, channel loyalty software, dealer incentive program, retailer rewards platform, influencer loyalty program, loyalty program management company Mumbai, GroRewardz, GroValue Industries, bulk UPI payment, eGift voucher procurement, channel partner rewards, sales incentive program India">
 <link rel="canonical" href="https://www.grorewardz.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GroRewardz — B2B Channel Loyalty &amp; Rewards Platform | GroValue Industries">
@@ -50,7 +50,7 @@
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"B2B Channel Loyalty Programs","description":"End-to-end design, management and reward fulfilment for dealer, retailer and influencer loyalty programs across India."}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bulk UPI Payments","description":"Automated bulk UPI payment processing for corporate incentive and commission payouts via Razorpay."}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"eGift Voucher Procurement","description":"Sourcing and digital delivery of eGift vouchers from Amazon, Flipkart, Myntra and 50+ brand partners."}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI System Integration & Consulting","description":"AI workflow automation, revenue intelligence and system integration for mid-to-large enterprises in BFSI, manufacturing and FMCG sectors in India."}}
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI System Integration & Consulting","description":"AI workflow automation, revenue intelligence and system integration for mid-to-large enterprises in BFSI, manufacturing and FMCG sectors in India.","url":"https://www.grorewardz.com/ai-consulting.html"}}
   ]
 }
 </script>
@@ -130,7 +130,7 @@ h3{font-size:1.22rem;line-height:1.32;font-weight:600;letter-spacing:-.018em}
   background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-.h1-shine.play{animation:h1-shine-play 2.4s ease-in-out 1}
+.h1-shine.play{animation:h1-shine-play 3.2s ease-in-out 1}
 @keyframes h1-shine-play{
   0%{opacity:0;background-position:170% center}
   6%{opacity:1}
@@ -168,10 +168,6 @@ section{padding:120px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;padding:16px 30px;min-height:50px;border-radius:var(--r);border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:background .22s var(--ease),border-color .22s var(--ease),color .22s var(--ease)}
 .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
 .btn-primary:hover{background:var(--blue-dk);border-color:var(--blue-dk)}
-.btn-dark{background:var(--navy);color:#fff;border-color:var(--navy)}
-.btn-dark:hover{background:var(--blue);border-color:var(--blue)}
-.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
-.btn-outline:hover{background:var(--navy);color:#fff}
 .btn-outline-light{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.5);backdrop-filter:blur(6px)}
 .btn-outline-light:hover{background:#fff;color:var(--navy);border-color:#fff}
 .btn:active{transform:scale(.985);transition:transform 80ms ease-out}
@@ -207,7 +203,29 @@ nav.scrolled .nav-links a:hover{color:var(--blue)}
 .nav-cta:hover{background:#fff;color:var(--navy);border-color:#fff}
 nav.scrolled .nav-cta{background:var(--navy);border-color:var(--navy);color:#fff;backdrop-filter:none}
 nav.scrolled .nav-cta:hover{background:var(--blue);border-color:var(--blue)}
-@media(max-width:1040px){.nav-links{display:none}}
+
+/* ── Mobile nav toggle ─────────────────────────────────── */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;padding:0;flex-shrink:0;color:#fff;transition:color .35s var(--ease)}
+nav.scrolled .nav-toggle{color:var(--navy)}
+.nav-toggle span{display:block;width:22px;height:2px;background:currentColor;margin:0 auto;transition:transform .25s var(--ease),opacity .25s var(--ease)}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1040px){
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:flex;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:#fff;border-top:1px solid var(--line-lt);
+    box-shadow:0 16px 32px rgba(5,28,44,.14);
+    max-height:0;overflow:hidden;
+    transition:max-height .32s var(--ease);
+  }
+  .nav-links.open{max-height:420px}
+  .nav-links li{width:100%}
+  .nav-links a{height:auto;padding:16px 32px;color:var(--head)}
+  .nav-links a::after{display:none}
+}
 
 /* ── HERO ──────────────────────────────────────────────── */
 .hero{position:relative;min-height:94vh;display:flex;flex-direction:column;background:var(--navy);overflow:hidden}
@@ -304,16 +322,6 @@ nav.scrolled .nav-cta:hover{background:var(--blue);border-color:var(--blue)}
 .case-body{padding:28px 30px 34px;flex:1}
 .case-body p{font-size:.92rem;color:var(--body);line-height:1.75}
 
-/* ── AI CONSULTING ─────────────────────────────────────── */
-.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:68px}
-.ai-card{background:transparent;border-top:3px solid var(--navy);padding:28px 0 0;transition:border-color .25s var(--ease)}
-.ai-card:hover{border-top-color:var(--blue)}
-.ai-tag{font-family:var(--display);font-size:1.5rem;font-weight:700;letter-spacing:-.04em;color:var(--blue);margin-bottom:18px;line-height:1}
-.ai-card h3{margin-bottom:14px}
-.ai-card p{font-size:.92rem;color:var(--body);line-height:1.78}
-.ai-bottom{display:flex;align-items:center;gap:56px;flex-wrap:wrap;padding-top:48px;border-top:1px solid var(--line)}
-.ai-bottom-text{font-size:1rem;color:var(--body);line-height:1.8;flex:1;min-width:280px;max-width:60ch}
-
 /* ── FULFILMENT ────────────────────────────────────────── */
 .fulfil-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:64px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
 .fulfil-panel{background:var(--white);padding:48px 42px}
@@ -397,8 +405,6 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   .process-grid{grid-template-columns:1fr 1fr;gap:36px}
   .prog-grid{grid-template-columns:1fr 1fr}
   .case-grid{grid-template-columns:1fr;max-width:540px}
-  .ai-grid{grid-template-columns:1fr 1fr}
-  .ai-bottom{flex-direction:column;align-items:flex-start;gap:30px}
   .fulfil-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr;gap:44px}
   .spotlight .wrap{grid-template-columns:1fr;gap:44px}
@@ -418,13 +424,15 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   .clients-grid{grid-template-columns:repeat(2,1fr)}
   .process-grid{grid-template-columns:1fr}
   .prog-grid{grid-template-columns:1fr}
-  .ai-grid{grid-template-columns:1fr}
   .cta-buttons{flex-direction:column;align-items:stretch}
   .case-grid{max-width:100%}
   .problem-callout{padding:40px 30px}
   .contact-row{grid-template-columns:1fr;gap:4px}
   .ctaband{padding:64px 0}
   .hero-ctas{gap:20px}
+  .nav-inner{gap:14px;flex-wrap:wrap}
+  .brand{font-size:1.1rem;gap:8px}
+  .nav-cta{padding:10px 18px;font-size:.82rem;min-height:auto}
 }
 </style>
 </head>
@@ -442,14 +450,17 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
       </svg>
       <span class="brand-text">Gro<span class="brand-accent">Rewardz</span></span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">How It Works</a></li>
       <li><a href="#programs">Programs</a></li>
-      <li><a href="#ai-consulting">AI Consulting</a></li>
+      <li><a href="ai-consulting.html">AI Consulting</a></li>
       <li><a href="#about">About</a></li>
     </ul>
-    <a href="#contact-form" class="btn nav-cta">Book a Discovery Call</a>
+    <a href="#contact-form" class="btn nav-cta">Book a Call</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -821,37 +832,6 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   </div>
 </section>
 
-<!-- ── AI CONSULTING ─────────────────────────────────────── -->
-<section id="ai-consulting">
-  <div class="wrap">
-    <div class="section-header" data-reveal>
-      <h2>AI that runs inside the systems you already use.</h2>
-      <p class="lead">We find the manual work costing your team the most hours, replace it with AI systems that run on their own, and measure what it saved.</p>
-    </div>
-    <div class="ai-grid" data-stagger>
-      <div class="ai-card">
-        <p class="ai-tag">01</p>
-        <h3>Process Automation</h3>
-        <p>Reporting, reconciliation, approvals, partner communications. We map how the work moves through your team today, build a system that does it, and hand over something that runs without anyone watching it.</p>
-      </div>
-      <div class="ai-card">
-        <p class="ai-tag">02</p>
-        <h3>Revenue Intelligence</h3>
-        <p>Your data already shows which accounts are about to churn and which product lines are being under-sold. Most teams find out a quarter later, from a report. We build models that flag it while you can still act.</p>
-      </div>
-      <div class="ai-card">
-        <p class="ai-tag">03</p>
-        <h3>System Integration</h3>
-        <p>We connect your ERP, CRM and analytics stack to models that read live data and act on it. Nothing gets ripped out. The integration runs alongside your current workflow while your team keeps working.</p>
-      </div>
-    </div>
-    <div class="ai-bottom" data-reveal>
-      <p class="ai-bottom-text">We scope every engagement before we take it. If the numbers do not work after two conversations, we tell you and we stop there. Most projects show measurable savings 8 to 12 weeks after kickoff.</p>
-      <a href="#contact-form" class="btn btn-outline">Book an AI Discovery Call</a>
-    </div>
-  </div>
-</section>
-
 <!-- ── ABOUT ─────────────────────────────────────────────── -->
 <section id="about" class="section-gray">
   <div class="wrap">
@@ -975,7 +955,7 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
       </div>
       <div class="footer-links">
         <a href="#services">Services</a>
-        <a href="#ai-consulting">AI Consulting</a>
+        <a href="ai-consulting.html">AI Consulting</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -997,23 +977,49 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
 })();
 </script>
 
-<!-- ── HERO SHINE (one-shot) ─────────────────────────────── -->
+<!-- ── MOBILE NAV TOGGLE ─────────────────────────────────── -->
+<script>
+(function(){
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+  const close = () => {
+    toggle.classList.remove('open');
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+</script>
+
+<!-- ── HERO SHINE (repeats every 6s) ─────────────────────── -->
 <script>
 (function(){
   // Targets the .h1-shine overlay only — .h1-base (the real heading
-  // text) is a separate node this script never touches.
+  // text) is a separate node this script never touches, so nothing
+  // here can make the actual heading disappear.
   const shine = document.querySelector('#hero-h1 .h1-shine');
   if (!shine) return;
-  const SWEEP_MS = 2400; // keep in sync with .h1-shine.play's animation-duration
+  const SWEEP_MS = 3200;  // keep in sync with .h1-shine.play's animation-duration
+  const REPEAT_MS = 6000; // gap between the START of one sweep and the next
   const cleanup = () => shine.classList.remove('play');
   // animationend is the normal path; the timeout is a fallback in case
   // the event doesn't fire (backgrounded tab, older WebView, etc.) —
   // classList.remove is a no-op if cleanup already ran, so both are safe.
   shine.addEventListener('animationend', cleanup);
-  setTimeout(() => {
+  const play = () => {
+    shine.classList.remove('play');
+    void shine.offsetWidth; // force reflow so re-adding the class restarts the animation
     shine.classList.add('play');
     setTimeout(cleanup, SWEEP_MS + 150);
-  }, 1400);
+  };
+  const loop = () => { play(); setTimeout(loop, REPEAT_MS); };
+  setTimeout(loop, 1400); // first sweep after the hero settles, then every 6s
 })();
 </script>
 
