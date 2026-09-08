@@ -99,33 +99,43 @@ h3{font-size:1.22rem;line-height:1.32;font-weight:600;letter-spacing:-.018em}
 
 .lead{color:var(--mute);max-width:58ch;font-size:1.19rem;margin-top:24px;line-height:1.65}
 
-/* ── Shiny text (one-shot) ───────────────────────────────
-   CSS port of the react-bits ShinyText component, played once
-   rather than looped. The heading has NO special class at rest
-   — it's plain solid color:#fff, so it is always guaranteed to
-   render correctly with zero risk of the clip-text trick leaving
-   it stuck transparent. JS adds .shine-once after a short delay
-   to play a single sweep, then removes the class again on
-   animationend, returning the heading to that same plain state.
-   Duration is 2.4s (an original ~1.8s sweep, slowed 35% per
-   feedback). Global prefers-reduced-motion rule forces near-zero
-   duration, so reduced-motion users barely see the class attach
-   before it's removed. ── */
-.shine-once{
+/* ── Shiny text (one-shot, layered) ──────────────────────
+   background-clip:text + animated background-position has a
+   real, documented Chromium flicker bug: the glyph fill can
+   flash transparent mid-repaint, independent of any JS timing.
+   Two earlier versions put the ONLY copy of the heading through
+   that path and both were reported disappearing. Fixed by never
+   letting the fragile trick touch the real text: .h1-base is a
+   plain solid span (zero clip-text, cannot flicker) that carries
+   the actual heading; .h1-shine is a separate, absolutely-
+   positioned, aria-hidden copy stacked exactly on top, invisible
+   (opacity:0) except during its one-shot play. If the overlay
+   glitches, the base text underneath is a different DOM node and
+   is never affected. ── */
+.hero h1{position:relative}
+.h1-base{display:block}
+.h1-shine{
+  position:absolute;inset:0;display:block;
+  color:transparent;
+  opacity:0;
+  pointer-events:none;
   background-image:linear-gradient(120deg,
     #fff 0%, #fff 42%,
     var(--cyan) 50%,
     #fff 58%, #fff 100%);
   background-size:260% 100%;
   background-repeat:no-repeat;
+  background-position:170% center;
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:shiny-sweep-once 2.4s ease-in-out 1;
 }
-@keyframes shiny-sweep-once{
-  0%{background-position:170% center}
-  100%{background-position:-170% center}
+.h1-shine.play{animation:h1-shine-play 2.4s ease-in-out 1}
+@keyframes h1-shine-play{
+  0%{opacity:0;background-position:170% center}
+  6%{opacity:1}
+  94%{opacity:1}
+  100%{opacity:0;background-position:-170% center}
 }
 
 /* ── Layout ────────────────────────────────────────────── */
@@ -449,7 +459,7 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
   <div class="hero-body">
     <div class="wrap">
       <div class="hero-inner">
-        <h1 id="hero-h1">Channel loyalty programs that make your dealers choose you every time.</h1>
+        <h1 id="hero-h1"><span class="h1-base">Channel loyalty programs that make your dealers choose you every time.</span><span class="h1-shine" aria-hidden="true">Channel loyalty programs that make your dealers choose you every time.</span></h1>
         <p class="hero-sub">We design, run and fulfil loyalty programs for dealers, retailers and influencers at India's largest corporates. Our team handles every part of it, from the reward catalog to last-mile delivery across 19,000 pin codes.</p>
         <div class="hero-ctas">
           <a href="#contact-form" class="btn btn-primary">Book a Free Discovery Call</a>
@@ -990,16 +1000,18 @@ footer{background:var(--navy);color:var(--on-navy);padding:72px 0 40px;font-size
 <!-- ── HERO SHINE (one-shot) ─────────────────────────────── -->
 <script>
 (function(){
-  const h1 = document.getElementById('hero-h1');
-  if (!h1) return;
-  const SWEEP_MS = 2400; // keep in sync with .shine-once's animation-duration
-  const cleanup = () => h1.classList.remove('shine-once');
+  // Targets the .h1-shine overlay only — .h1-base (the real heading
+  // text) is a separate node this script never touches.
+  const shine = document.querySelector('#hero-h1 .h1-shine');
+  if (!shine) return;
+  const SWEEP_MS = 2400; // keep in sync with .h1-shine.play's animation-duration
+  const cleanup = () => shine.classList.remove('play');
   // animationend is the normal path; the timeout is a fallback in case
   // the event doesn't fire (backgrounded tab, older WebView, etc.) —
   // classList.remove is a no-op if cleanup already ran, so both are safe.
-  h1.addEventListener('animationend', cleanup);
+  shine.addEventListener('animationend', cleanup);
   setTimeout(() => {
-    h1.classList.add('shine-once');
+    shine.classList.add('play');
     setTimeout(cleanup, SWEEP_MS + 150);
   }, 1400);
 })();
